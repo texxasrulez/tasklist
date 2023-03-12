@@ -296,7 +296,7 @@ function rcube_tasklist_ui(settings)
         rcmail.addEventListener('plugin.update_tasklist', update_list);
         rcmail.addEventListener('plugin.destroy_tasklist', destroy_list);
         rcmail.addEventListener('plugin.unlock_saving', unlock_saving);
-        rcmail.addEventListener('plugin.refresh_tagcloud', function() { update_tagcloud(); });
+        rcmail.addEventListener('plugin.refresh_tagcloud', function() { update_taglist(); });
         rcmail.addEventListener('requestrefresh', before_refresh);
         rcmail.addEventListener('plugin.reload_data', function(){
             list_tasks(null, true);
@@ -1430,8 +1430,11 @@ function rcube_tasklist_ui(settings)
             )
             .attr('tabindex', '0')
             .attr('aria-labelledby', label_id)
-            .data('id', rec.id)
-            .draggable({
+            .data('id', rec.id);
+
+        // Make the task draggable, but not in the Elastic skin on touch devices, to fix scrolling
+        if (!window.UI || !UI.is_touch || !window.UI.is_touch()) {
+            div.draggable({
                 revert: 'invalid',
                 addClasses: false,
                 cursorAt: { left:-10, top:12 },
@@ -1442,6 +1445,7 @@ function rcube_tasklist_ui(settings)
                 drag: task_draggable_move,
                 revertDuration: 300
             });
+        }
 
         if (window.kolab_tags_text_block) {
             var tags = rec.tags || [];
@@ -2751,10 +2755,10 @@ function rcube_tasklist_ui(settings)
      */
     function task_show_attachments(list, container, task, edit)
     {
-      libkolab.list_attachments(list, container, edit, task,
-        function(id) { remove_attachment(id); },
-        function(data) { load_attachment(data); }
-      );
+        libkolab.list_attachments(list, container, edit, task,
+            function(id) { remove_attachment(id); },
+            function(data) { load_attachment(data); }
+        );
     };
 
     /**

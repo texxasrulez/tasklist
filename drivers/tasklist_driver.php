@@ -75,7 +75,7 @@ abstract class tasklist_driver
     public $attendees = false;
     public $undelete = false; // task undelete action
     public $sortable = false;
-    public $alarm_types = array('DISPLAY');
+    public $alarm_types = ['DISPLAY'];
     public $alarm_absolute = true;
     public $last_error;
 
@@ -331,7 +331,7 @@ abstract class tasklist_driver
     public function get_message_related_tasks($headers, $folder)
     {
         // to be implemented by the derived classes
-        return array();
+        return [];
     }
 
     /**
@@ -342,7 +342,8 @@ abstract class tasklist_driver
      */
     public function is_complete($task)
     {
-        return ($task['complete'] >= 1.0 && empty($task['status'])) || $task['status'] === 'COMPLETED';
+        return (isset($task['complete']) && $task['complete'] >= 1.0 && empty($task['status']))
+            || (!empty($task['status']) && $task['status'] === 'COMPLETED');
     }
 
     /**
@@ -428,7 +429,7 @@ abstract class tasklist_driver
      */
     public function tasklist_edit_form($action, $list, $formfields)
     {
-        $table = new html_table(array('cols' => 2, 'class' => 'propform'));
+        $table = new html_table(['cols' => 2, 'class' => 'propform']);
 
         foreach ($formfields as $col => $colprop) {
             $label = !empty($colprop['label']) ? $colprop['label'] : $rcmail->gettext("$domain.$col");
@@ -446,13 +447,13 @@ abstract class tasklist_driver
     public function tasklist_caldav_url($list)
     {
         $rcmail = rcube::get_instance();
-        if (!empty($list['caldavuid']) && ($template = $rcmail->config->get('calendar_caldav_url', null))) {
-            return strtr($template, array(
+        if (!empty($list['caldavuid']) && ($template = $rcmail->config->get('calendar_caldav_url'))) {
+            return strtr($template, [
                 '%h' => $_SERVER['HTTP_HOST'],
                 '%u' => urlencode($rcmail->get_user_name()),
                 '%i' => urlencode($list['caldavuid']),
                 '%n' => urlencode($list['editname']),
-            ));
+            ]);
         }
 
         return null;
