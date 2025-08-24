@@ -1,0 +1,42 @@
+<?php
+
+// backend type (database, kolab, caldav)
+$config['tasklist_driver'] = 'caldav';
+$config['tasklist_debug'] = false;
+
+// CalDAV server location (required when tasklist_driver = caldav)
+// For Nextcloud Tasks, use your Nextcloud CalDAV base URL.
+// Examples:
+//   https://nextcloud.example.com/remote.php/dav
+//   https://cloud.example.com/remote.php/dav
+// The plugin will discover your task lists (VTODO) under your CalDAV calendars.
+$config['tasklist_caldav_server'] = "https://domain.com/nextcloud/remote.php/dav";
+
+// default sorting order of tasks listing (auto, datetime, startdatetime, flagged, complete, changed)
+$config['tasklist_sort_col'] = '';
+
+// default sorting order for tasks listing (asc or desc)
+$config['tasklist_sort_order'] = 'asc';
+
+// Force using libkolab DAV client for CalDAV (default: false).
+// Leave 'false' to use the built-in Nextcloud WebDAV client and avoid libkolab.
+$config['tasklist_use_libkolab'] = false;
+
+// Optional: full DAV href to a specific tasks calendar to bypass discovery
+// e.g. '/remote.php/dav/calendars/USERNAME/Tasks/' or full URL    %l %p
+$config['nextcloud_tasks_collection'] = '';
+
+/*
+// Good default when Nextcloud usernames are not emails:
+$config['nextcloud_tasks_collection'] = '/remote.php/dav/calendars/%l/Tasks/'; if usernames aren’t emails
+// Or use the discovered principal username:
+$config['nextcloud_tasks_collection'] = '/remote.php/dav/calendars/%p/Tasks/';
+// If you’re sure of the full absolute URL:
+$config['nextcloud_tasks_collection'] = 'https://domain.com/nextcloud/remote.php/dav/calendars/%p/Tasks/';
+
+%u → full Roundcube username (e.g. gene@genesworld.net)
+
+%l → localpart
+
+%p → principal username returned by CalDAV discovery
+*/

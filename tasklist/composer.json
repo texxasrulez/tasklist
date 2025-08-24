@@ -1,0 +1,32 @@
+{
+    "name": "kolab/tasklist",
+    "type": "roundcube-plugin",
+    "description": "Task management plugin",
+    "homepage": "https://git.kolab.org/diffusion/RPK/",
+    "license": "AGPLv3",
+    "version": "3.6.0",
+    "authors": [
+        {
+            "name": "Thomas Bruederli",
+            "email": "bruederli@kolabsys.com",
+            "role": "Lead"
+        },
+        {
+            "name": "Aleksander Machniak",
+            "email": "machniak@kolabsys.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "roundcube/plugin-installer": ">=0.1.3",
+        "kolab/libcalendaring": ">=3.4.0",
+        "kolab/libkolab": ">=3.4.0"
+    },
+    "extra": {
+        "roundcube": {
+            "min-version": "1.6.0",
+            "sql-dir": "drivers/database/SQL"
+        }
+    }
+}

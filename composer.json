@@ -1,0 +1,38 @@
+{
+  "name": "texxasrulez/tasklist",
+    "description": "Task management plugin for Nextcloud",
+  "homepage": "https://github.com/texxasrulez/tasklist",
+  "type": "roundcube-plugin",
+  "support": {
+    "issues": "https://github.com/texxasrulez/tasklist/issues",
+    "source": "https://github.com/texxasrulez/tasklist"
+  },
+  "license": "GPL-3.0",
+  "version": "1.0",
+    "authors": [
+        {
+            "name": "Thomas Bruederli",
+            "email": "bruederli@kolabsys.com",
+            "role": "Lead"
+        },
+        {
+            "name": "Aleksander Machniak",
+            "email": "machniak@kolabsys.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Gene Hawkins",
+            "email": "texxasrulez@yahoo.com",
+            "role": "Developer"
+        }
+    ],  
+  "require": {
+    "php": ">=7.4",
+    "roundcube/plugin-installer": "~0.1 || ~0.2 || ~0.3",
+        "kolab/libcalendaring": ">=3.4.0",
+        "kolab/libkolab": ">=3.4.0"
+  },
+  "extra": {
+    "installer-name": "tasklist"
+  }
+}
