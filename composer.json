@@ -1,8 +1,8 @@
 {
   "name": "texxasrulez/tasklist",
-    "description": "Task management plugin for Nextcloud",
-  "homepage": "https://github.com/texxasrulez/tasklist",
   "type": "roundcube-plugin",
+   "description": "Task management plugin for Nextcloud",
+  "homepage": "https://github.com/texxasrulez/tasklist",
   "support": {
     "issues": "https://github.com/texxasrulez/tasklist/issues",
     "source": "https://github.com/texxasrulez/tasklist"
@@ -10,16 +10,6 @@
   "license": "GPL-3.0",
   "version": "1.0",
     "authors": [
-        {
-            "name": "Thomas Bruederli",
-            "email": "bruederli@kolabsys.com",
-            "role": "Lead"
-        },
-        {
-            "name": "Aleksander Machniak",
-            "email": "machniak@kolabsys.com",
-            "role": "Developer"
-        },
         {
             "name": "Gene Hawkins",
             "email": "texxasrulez@yahoo.com",
