@@ -23,7 +23,7 @@
         "kolab/libkolab": ">=3.4.0"
   },
   "extra": {
-    "installer-name": "tasklist"
+    "installer-name": "tasklist",
             "sql-dir": "drivers/database/SQL"
         }
 }
