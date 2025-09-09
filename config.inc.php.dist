@@ -34,7 +34,7 @@ $config['nextcloud_tasks_collection'] = '/remote.php/dav/calendars/%p/Tasks/';
 // If you’re sure of the full absolute URL:
 $config['nextcloud_tasks_collection'] = 'https://domain.com/nextcloud/remote.php/dav/calendars/%p/Tasks/';
 
-%u → full Roundcube username (e.g. gene@genesworld.net)
+%u → full Roundcube username
 
 %l → localpart
 
