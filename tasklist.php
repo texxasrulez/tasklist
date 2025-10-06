@@ -703,7 +703,7 @@ class tasklist extends rcube_plugin
             $rec['description'] = '';
         // Ensure description key exists
         if (!isset($rec['description'])) { $rec['description'] = ''; }
-}
+		}
 
         foreach ($rec as $key => $val) {
             if ($val === 'null') {
