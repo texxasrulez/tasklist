@@ -5,7 +5,7 @@
 [![Project license](https://img.shields.io/github/license/texxasrulez/tasklist?style=plastic)](https://github.com/texxasrulez/tasklist/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/texxasrulez/tasklist?style=plastic&logo=github)](https://github.com/texxasrulez/tasklist/stargazers)
 [![issues](https://img.shields.io/github/issues/texxasrulez/tasklist?style=plastic)](https://github.com/texxasrulez/tasklist/issues)
-[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?style=plastic&logo=paypal)](https://www.paypal.me/texxasrulez)
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-money_please-blue.svg?style=plastic&logo=paypal)](https://www.paypal.me/texxasrulez)
 
 This Tasklist plugin works with Nextcloud.
 
