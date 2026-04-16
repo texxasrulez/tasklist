@@ -1,0 +1,24 @@
+<?php
+
+// backend type (database, kolab, caldav, rounddav)
+$config['tasklist_driver'] = 'rounddav';
+
+//RoundDAV configs
+$config['rounddav_tasklist_slug_uri'] = true;
+
+//RoundDAV Sort Order
+$config['rounddav_tasklist_favorites'] = [
+    'Tasks',            // URI segment
+//    'Personal Tasks',   // display name
+//    '/dav/calendars/user/me/today', // full href
+//    'f1234567890abcdef', // explicit ID
+];
+
+// CalDAV server location (required when tasklist_driver = caldav)
+$config['tasklist_caldav_server'] = 'https://www.domain.com/rounddav/public';
+
+// default sorting order of tasks listing (auto, datetime, startdatetime, flagged, complete, changed)
+$config['tasklist_sort_col'] = '';
+
+// default sorting order for tasks listing (asc or desc)
+$config['tasklist_sort_order'] = 'asc';
