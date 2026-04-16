@@ -32,6 +32,8 @@
 #[AllowDynamicProperties]
 class tasklist extends rcube_plugin
 {
+    public $version = '3.6.1';
+
     public const FILTER_MASK_TODAY = 1;
     public const FILTER_MASK_TOMORROW = 2;
     public const FILTER_MASK_WEEK = 4;

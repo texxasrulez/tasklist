@@ -540,7 +540,7 @@ ul.toolbarmenu li span.icon.taskadd,
 	padding: 4px 5px 3px 5px;
 	border: 1px solid #fff;
 	border-radius: 5px;
-	background: rgba(255, 255, 255, 0.5);
+	background: #fff;
 	-webkit-box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.4);
 	-moz-box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.4);
 	box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.4);
